@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio de Equipo de Diseño</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ececec;
+            overflow-x: hidden;
+        }
+        header {
+            background-color: #3b5998;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .team {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+        .member {
+            perspective: 1000px;
+            width: 18%;
+            height: 200px;
+            min-width: 200px;
+            margin: 1rem;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: slideIn 1s forwards;
+            margin-top: 2rem;
+        }
+        .member:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+        .member:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+        .member:nth-child(4) {
+            animation-delay: 0.6s;
+        }
+        .member:nth-child(5) {
+            animation-delay: 0.8s;
+        }
+        .member-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+        .member:hover .member-inner {
+            transform: rotateY(180deg);
+        }
+        .member-front, .member-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 1rem;
+            text-align: center;
+        }
+        .member-front {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .member-front img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            margin-bottom: 1rem;
+        }
+        .member-back {
+            background-color: #ffcc00;
+            color: black;
+            transform: rotateY(180deg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .description, .process {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 1rem;
+            margin-top: 2rem;
+            animation: fadeIn 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Equipo de Diseño de Usuario - Fábrica de Talentos</h1>
+    </header>
+    <div class="container">
+        <section class="team">
+            <div class="member">
+                <div class="member-inner">
+                    <div class="member-front">
+                        <img src="integrante1.jpg" alt="Integrante 1">
+                        <h3>CHRISTIAN ANDRES CANTERO MANRIQUE</h3>
+                    </div>
+                    <div class="member-back">
+                        <p>Descripción breve del integrante 1.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="member">
+                <div class="member-inner">
+                    <div class="member-front">
+                        <img src="integrante1.jpg" alt="Integrante 2">
+                        <h3>ROBERTTH ANDREY DAZA LOAIZA</h3>
+                    </div>
+                    <div class="member-back">
+                        <p>Descripción breve del integrante 2.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="member">
+                <div class="member-inner">
+                    <div class="member-front">
+                        <img src="integrante1.jpg" alt="Integrante 3">
+                        <h3>MARYELY ANDREA GRAJALES NARVAEZ</h3>
+                    </div>
+                    <div class="member-back">
+                        <p>Descripción breve del integrante 3.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="member">
+                <div class="member-inner">
+                    <div class="member-front">
+                        <img src="integrante1.jpg" alt="Integrante 4">
+                        <h3>JEINER ANDREY GRIJALBA DELACRUZ</h3>
+                    </div>
+                    <div class="member-back">
+                        <p>Descripción breve del integrante 4.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="member">
+                <div class="member-inner">
+                    <div class="member-front">
+                        <img src="integrante1.jpg" alt="Integrante 5">
+                        <h3>KAREN NIKOLLE NARVEZ ORDONEZ</h3>
+                    </div>
+                    <div class="member-back">
+                        <p>Descripción breve del integrante 5.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="description">
+            <h2>Descripción del Proyecto</h2>
+            <p>El proyecto "Fábrica de Talentos" es una página de búsqueda de empleo diseñada para conectar a los solicitantes de empleo con las empresas. Nuestro objetivo es proporcionar una plataforma intuitiva y fácil de usar para mejorar la experiencia de búsqueda de empleo.</p>
+        </section>
+        <section class="process">
+            <h2>Proceso de Diseño</h2>
+            <ol>
+                <li><strong>Investigación:</strong> Recopilación de información sobre las necesidades de los usuarios y las tendencias del mercado.</li>
+                <li><strong>Planeación:</strong> Definición de los objetivos del proyecto y creación de un plan de trabajo.</li>
+                <li><strong>Diseño:</strong> Creación de wireframes y prototipos del sitio web.</li>
+                <li><strong>Desarrollo:</strong> Implementación del diseño utilizando tecnologías web.</li>
+                <li><strong>Pruebas:</strong> Verificación de la funcionalidad y usabilidad del sitio web.</li>
+                <li><strong>Lanzamiento:</strong> Publicación del sitio web y monitoreo continuo para realizar mejoras.</li>
+            </ol>
+        </section>
+    </div>
+</body>
+</html>
